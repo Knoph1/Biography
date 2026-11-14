@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knoph O. Ayieko | Software Engineer, Tech Entrepreneur & Tax Administrator</title>
+    <meta name="description" content="Complete biography and professional portfolio of Knoph O. Ayieko — Kenyan software developer, IT specialist, tech entrepreneur and Tax & Customs Administrator.">
+    
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        },
+                        emeraldAccent: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 9s infinite',
+                        'fade-in-up': 'fadeInUp 0.7s ease-out forwards',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -40px) scale(1.08)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Scroll Reveal & Subtle Glass Effects -->
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-nav {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(100, 116, 139, 0.35);
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(100, 116, 139, 0.6);
+        }
+    </style>
+
+    <!-- Theme Initialization Script (Prevents Flash of Unstyled Theme) -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased selection:bg-brand-600 selection:text-white transition-colors duration-300 overflow-x-hidden">
+
+    <!-- ==================== STICKY GLASSMORPHISM NAVBAR ==================== -->
+    <header class="fixed top-0 inset-x-0 z-50 glass-nav bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/70 dark:border-slate-800/80 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <!-- Brand / Monogram -->
+                <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-brand-600/20 group-hover:scale-105 transition-transform">
+                        KA
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white">Knoph O. Ayieko</span>
+                        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 hidden sm:block">Systems &bull; Tech &bull; Fiscal</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+                    <a href="#about" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition">About</a>
+                    <a href="#experience" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition">Experience</a>
+                    <a href="#education" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition">Education</a>
+                    <a href="#certifications" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition">Certifications</a>
+                    <a href="#community" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition">Community</a>
+                    <a href="#contact" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-600 dark:text-slate-300 dark:hover:text-brand-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition">Contact</a>
+                </nav>
+
+                <!-- Right Controls: Theme Toggle, Download/Copy Bio & Mobile Menu Button -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <button id="themeToggle" aria-label="Toggle Dark Mode" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/90 dark:hover:bg-slate-700 text-slate-700 dark:text-amber-300 transition shadow-sm">
+                        <i id="themeIcon" class="fa-solid fa-moon text-base"></i>
+                    </button>
+
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold bg-brand-600 hover:bg-brand-700 text-white shadow-sm shadow-brand-600/25 transition">
+                        <span>Connect</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+
+                    <button id="mobileMenuBtn" aria-label="Open Navigation Menu" class="lg:hidden p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition">
+                        <i id="mobileMenuIcon" class="fa-solid fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 px-4 pt-3 pb-5 space-y-1 shadow-xl">
+            <a href="#about" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About &amp; Overview</a>
+            <a href="#experience" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Career &amp; Experience</a>
+            <a href="#education" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Academic Background</a>
+            <a href="#certifications" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Training &amp; Certifications</a>
+            <a href="#community" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Community &amp; Leadership</a>
+            <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-brand-600 dark:text-brand-400 font-semibold hover:bg-brand-50 dark:hover:bg-slate-800">Digital Footprint &amp; Contact</a>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="top" class="relative pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-32 overflow-hidden">
+        <!-- Decorative Ambient Gradient Blobs -->
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden -z-10">
+            <div class="absolute -top-24 -left-24 w-80 h-80 sm:w-[28rem] sm:h-[28rem] bg-brand-400/20 dark:bg-brand-600/15 rounded-full blur-3xl animate-blob"></div>
+            <div class="absolute top-1/3 -right-24 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-400/20 dark:bg-emerald-500/10 rounded-full blur-3xl animate-blob" style="animation-delay: 2s;"></div>
+            <div class="absolute -bottom-24 left-1/3 w-72 h-72 bg-indigo-400/15 dark:bg-indigo-600/10 rounded-full blur-3xl animate-blob" style="animation-delay: 4s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column: Biography Intro & CTA -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/80 border border-brand-200/80 dark:border-brand-800/70 text-brand-700 dark:text-brand-300 text-xs sm:text-sm font-medium">
+                        <span class="relative flex h-2.5 w-2.5">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                        </span>
+                        <span>Nairobi, Kenya &bull; Official Biography &amp; Dossier</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
+                        Knoph O. <span class="bg-gradient-to-r from-brand-600 via-blue-500 to-emerald-500 bg-clip-text text-transparent">Ayieko</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl font-medium text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Kenyan Software Developer, IT Specialist, Tech Entrepreneur and Tax &amp; Customs Administrator bridging full-stack engineering, health informatics and public revenue systems.
+                    </p>
+
+                    <!-- Core Philosophy Callout Box -->
+                    <blockquote class="relative p-5 sm:p-6 rounded-2xl bg-white/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm max-w-2xl mx-auto lg:mx-0 text-left">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-900/50 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-quote-left text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-base sm:text-lg font-semibold italic text-slate-900 dark:text-white">
+                                    &ldquo;Efficient systems are the backbone of strong institutions.&rdquo;
+                                </p>
+                                <p class="mt-1 text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                                    Guiding Professional Philosophy
+                                </p>
+                            </div>
+                        </div>
+                    </blockquote>
+
+                    <!-- Primary Action Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
+                        <a href="#experience" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base bg-brand-600 hover:bg-brand-700 text-white shadow-lg shadow-brand-600/25 transition transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Explore Career Journey</span>
+                        </a>
+                        <a href="https://www.knoph.dev" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 border border-slate-300 dark:border-slate-700 shadow-sm transition transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-globe text-brand-600 dark:text-brand-400"></i>
+                            <span>www.knoph.dev</span>
+                        </a>
+                        <a href="https://github.com/Knoph1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-3.5 rounded-xl font-semibold text-sm sm:text-base bg-slate-900 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 text-white border border-slate-800 dark:border-slate-700 shadow-sm transition transform hover:-translate-y-0.5">
+                            <i class="fa-brands fa-github text-lg"></i>
+                            <span>@Knoph1</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Executive Profile Dossier Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-xl shadow-slate-200/50 dark:shadow-none">
+                        <!-- Top Monogram Header -->
+                        <div class="flex items-center gap-4 pb-6 border-b border-slate-100 dark:border-slate-800">
+                            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-gradient-to-tr from-brand-700 via-brand-500 to-emerald-500 flex items-center justify-center text-white font-extrabold text-2xl sm:text-3xl shadow-lg shrink-0 border border-slate-200 dark:border-slate-700">
+                                <img src="/root/Knoph.JPG" alt="Knoph O. Ayieko" class="w-full h-full object-cover object-center" onerror="this.onerror=null; this.parentElement.innerHTML='KOA';">
+                            </div>
+                            <div>
+                                <span class="inline-block px-2.5 py-0.5 rounded-md text-xs font-mono font-medium bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 mb-1">
+                                    Executive Profile
+                                </span>
+                                <h2 class="text-xl font-bold text-slate-900 dark:text-white">Knoph O. Ayieko</h2>
+                                <p class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-1.5 mt-0.5">
+                                    <i class="fa-solid fa-location-dot text-brand-500"></i>
+                                    <span>Nairobi, Kenya</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Key Pillars Grid -->
+                        <div class="py-6 space-y-4">
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-building-shield"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-mono uppercase text-slate-400">Current Leadership</p>
+                                    <p class="text-sm font-semibold text-slate-800 dark:text-slate-100">Managing Director, Omni-Legacy Limited</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-landmark"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-mono uppercase text-slate-400">Public Service &amp; Fiscal</p>
+                                    <p class="text-sm font-semibold text-slate-800 dark:text-slate-100">Graduate Trainee, Kenya Revenue Authority (KRA)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-mono uppercase text-slate-400">Postgraduate Focus</p>
+                                    <p class="text-sm font-semibold text-slate-800 dark:text-slate-100">MSc in Information Technology (JKUAT) &amp; Tax/Customs (KESRA)</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-mono uppercase text-slate-400">Domain Expertise</p>
+                                    <p class="text-sm font-semibold text-slate-800 dark:text-slate-100">Full-Stack Systems, Health Informatics &amp; Revenue Compliance</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Quick Stats -->
+                        <div class="grid grid-cols-3 gap-2 pt-5 border-t border-slate-100 dark:border-slate-800 text-center">
+                            <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+                                <div class="text-lg sm:text-xl font-extrabold text-brand-600 dark:text-brand-400">9+</div>
+                                <div class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Key Roles</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+                                <div class="text-lg sm:text-xl font-extrabold text-emerald-600 dark:text-emerald-400">3</div>
+                                <div class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Core Sectors</div>
+                            </div>
+                            <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60">
+                                <div class="text-lg sm:text-xl font-extrabold text-indigo-600 dark:text-indigo-400">10+</div>
+                                <div class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT / OVERVIEW SECTION ==================== -->
+    <section id="about" class="py-20 bg-white dark:bg-slate-900/50 border-y border-slate-200/70 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="max-w-3xl">
+                <span class="text-xs font-mono font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">01 &bull; Executive Overview</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                    Bridging Software Engineering, Health Informatics &amp; Public Revenue Administration
+                </h2>
+            </div>
+
+            <div class="mt-10 grid lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-7 space-y-5 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+                    <p>
+                        <strong class="text-slate-900 dark:text-white font-semibold">Knoph O. Ayieko</strong> is a multidisciplinary Kenyan technologist, entrepreneur and public administrator based in Nairobi. His career reflects a deliberate progression from building resilient software applications and national health data systems to strengthening fiscal compliance and enterprise technology governance.
+                    </p>
+                    <p>
+                        Guided by the conviction that <span class="text-brand-600 dark:text-brand-400 font-medium">&ldquo;efficient systems are the backbone of strong institutions,&rdquo;</span> Ayieko has contributed across critical national infrastructure—supporting HIV/AIDS and electronic medical record ecosystems (KenyaEMR, CPIMS, KMHFR, NASCOP), deploying educational ICT networks across Kenyan schools and engineering modern full-stack platforms for private-sector enterprises.
+                    </p>
+                    <p>
+                        As Managing Director of <strong class="text-slate-900 dark:text-white font-semibold">Omni-Legacy Limited</strong> and a Graduate Trainee with the <strong class="text-slate-900 dark:text-white font-semibold">Kenya Revenue Authority (KRA)</strong> undergoing specialized training at KESRA, he combines deep technical fluency with disciplined institutional leadership and analytical rigor.
+                    </p>
+                </div>
+
+                <!-- 4 Core Competency Cards -->
+                <div class="lg:col-span-5 grid sm:grid-cols-2 lg:grid-cols-1 gap-4">
+                    <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-brand-400 dark:hover:border-brand-600 transition">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="w-9 h-9 rounded-xl bg-brand-600/10 text-brand-600 dark:text-brand-400 flex items-center justify-center">
+                                <i class="fa-solid fa-code"></i>
+                            </span>
+                            <h3 class="font-bold text-slate-900 dark:text-white">Full-Stack Software Engineering</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                            React, Node.js, Express, Python, Flask, Django, PHP, SQL, Supabase and automated CI/CD workflows.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-emerald-400 dark:hover:border-emerald-600 transition">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="w-9 h-9 rounded-xl bg-emerald-600/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </span>
+                            <h3 class="font-bold text-slate-900 dark:text-white">Tax, Customs &amp; Data Integrity</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                            Corporate tax compliance analysis, customs frameworks and data-driven controls to curb revenue leakage.
+                        </p>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-indigo-400 dark:hover:border-indigo-600 transition sm:col-span-2 lg:col-span-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="w-9 h-9 rounded-xl bg-indigo-600/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </span>
+                            <h3 class="font-bold text-slate-900 dark:text-white">Health Informatics &amp; Infrastructure</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">
+                            National health databases (KenyaEMR, CPIMS, KMHFR), GIS mapping, enterprise LANs and cybersecurity governance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CAREER & PROFESSIONAL EXPERIENCE ==================== -->
+    <section id="experience" class="py-20 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-xs font-mono font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">02 &bull; Professional Trajectory</span>
+                    <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                        Career &amp; Professional Experience
+                    </h2>
+                    <p class="mt-2 text-slate-600 dark:text-slate-400 max-w-2xl">
+                        Filter across leadership, public sector &amp; fiscal roles, software engineering and health informatics initiatives.
+                    </p>
+                </div>
+
+                <!-- Interactive Category Filter Pills -->
+                <div id="experienceFilters" class="flex flex-wrap gap-2" role="tablist" aria-label="Filter experience by sector">
+                    <button data-filter="all" class="exp-filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-brand-600 text-white shadow-sm transition">
+                        All Roles (9)
+                    </button>
+                    <button data-filter="leadership" class="exp-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500 transition">
+                        Leadership &amp; Public Sector
+                    </button>
+                    <button data-filter="software" class="exp-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500 transition">
+                        Software &amp; Web
+                    </button>
+                    <button data-filter="health" class="exp-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500 transition">
+                        Health &amp; Public ICT
+                    </button>
+                </div>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="relative space-y-6 before:content-[''] before:absolute before:top-2 before:bottom-2 before:left-5 sm:before:left-8 before:w-0.5 before:bg-gradient-to-b before:from-brand-600 before:via-emerald-500 before:to-slate-300 dark:before:to-slate-800">
+
+                <!-- Role 1: Omni-Legacy Limited -->
+                <article data-category="leadership software" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-brand-600 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-brand-400 dark:hover:border-brand-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Managing Director</h3>
+                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Current</span>
+                                </div>
+                                <p class="text-sm sm:text-base font-semibold text-brand-600 dark:text-brand-400 mt-0.5">
+                                    Omni-Legacy Limited &bull; <span class="text-slate-500 dark:text-slate-400 font-normal">Nairobi, Kenya</span>
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Jul 2026 &ndash; Present
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Directs corporate technical strategy, multidisciplinary software engineering teams, cloud architecture solutions, cybersecurity governance and enterprise IT consulting engagements.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Executive Leadership</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Cloud &amp; Cybersecurity</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">IT Consulting</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Role 2: Kenya Revenue Authority (KRA) -->
+                <article data-category="leadership" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-emerald-400 dark:hover:border-emerald-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Graduate Trainee</h3>
+                                    <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Current</span>
+                                </div>
+                                <p class="text-sm sm:text-base font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">
+                                    Kenya Revenue Authority (KRA) &bull; <span class="text-slate-500 dark:text-slate-400 font-normal">Nairobi, Kenya</span>
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Jan 2026 &ndash; Present
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Undergoing intensive Tax &amp; Customs Administration training at the Kenya School of Revenue Administration (KESRA); analyzes corporate data structures to strengthen taxpayer compliance and curb revenue leakage.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Tax &amp; Customs Administration</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Corporate Data Analysis</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Revenue Assurance</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Role 3: Ministry of Education (DLP Programme) -->
+                <article data-category="health leadership" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-brand-500 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-brand-400 dark:hover:border-brand-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">ICT Intern</h3>
+                                <p class="text-sm sm:text-base font-semibold text-brand-600 dark:text-brand-400 mt-0.5">
+                                    Ministry of Education (Digital Literacy Programme) &bull; <span class="text-slate-500 dark:text-slate-400 font-normal">Eldoret, Kenya</span>
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Oct 2025 &ndash; Jan 2026
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Supported Digital Literacy Programme (DLP) computing endpoints, hardware diagnostics and maintenance, local area networks (LANs) and regional ICT operational reporting across primary schools.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">DLP Infrastructure</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">LAN Administration</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Hardware Support</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Role 4: E-Bronzy Ware Co. Ltd & SomaAi -->
+                <article data-category="software" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-indigo-500 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-indigo-400 dark:hover:border-indigo-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Full-Stack Developer</h3>
+                                <p class="text-sm sm:text-base font-semibold text-indigo-600 dark:text-indigo-400 mt-0.5">
+                                    E-Bronzy Ware Co. Ltd &amp; SomaAi (ALX Africa)
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Oct 2025 &ndash; Dec 2025
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Engineered an end-to-end construction procurement system using React, Node.js, Express and Supabase with automated GitHub Actions CI/CD pipelines; translated Figma prototypes into responsive, production-grade web applications.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">React &amp; Node.js</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Supabase</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">GitHub Actions CI/CD</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Figma to Code</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Role 5: Christian Life Community (CLC) in Kenya -->
+                <article data-category="software leadership" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-sky-500 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-sky-400 dark:hover:border-sky-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Webmaster (Volunteer)</h3>
+                                <p class="text-sm sm:text-base font-semibold text-sky-600 dark:text-sky-400 mt-0.5">
+                                    Christian Life Community (CLC) in Kenya
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                May 2025 &ndash; Oct 2025
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Managed server security hardening, digital content architecture and web infrastructure reliability for the national community platform.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Server Security</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Web Infrastructure</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Role 6: Ashker Credit Solution -->
+                <article data-category="software" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-violet-500 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-violet-400 dark:hover:border-violet-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Back-End Developer</h3>
+                                <p class="text-sm sm:text-base font-semibold text-violet-600 dark:text-violet-400 mt-0.5">
+                                    Ashker Credit Solution &bull; <span class="text-slate-500 dark:text-slate-400 font-normal">Addis Ababa (Remote)</span>
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Nov 2024 &ndash; Jan 2025
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Architected and built a microfinance MVP backend ledger system leveraging Python, Flask and relational SQL databases for accurate financial transaction tracking.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Python &amp; Flask</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">SQL Relational DB</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">FinTech Ledger</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Role 7: Ministry of Health – NASCOP -->
+                <article data-category="health software" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-rose-500 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-rose-400 dark:hover:border-rose-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Software Developer</h3>
+                                <p class="text-sm sm:text-base font-semibold text-rose-600 dark:text-rose-400 mt-0.5">
+                                    Ministry of Health &ndash; NASCOP &bull; <span class="text-slate-500 dark:text-slate-400 font-normal">Nairobi, Kenya</span>
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Apr 2024 &ndash; Sep 2024
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Rebuilt and modernized Kenya's national HIV/AIDS public health web portal using PHP and custom WordPress themes to improve public accessibility, performance and information dissemination.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">PHP &amp; Custom WordPress</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">National Health Portal</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Role 8: UNES Ltd (USAID HealthIT) -->
+                <article data-category="health" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-teal-500 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-teal-400 dark:hover:border-teal-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Health IT Intern</h3>
+                                <p class="text-sm sm:text-base font-semibold text-teal-600 dark:text-teal-400 mt-0.5">
+                                    UNES Ltd (USAID HealthIT) &bull; <span class="text-slate-500 dark:text-slate-400 font-normal">Nairobi &amp; South Rift</span>
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Feb 2024 &ndash; Jan 2025
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Maintained mission-critical national health informatics databases—including <strong class="text-slate-800 dark:text-slate-100">KenyaEMR</strong>, <strong class="text-slate-800 dark:text-slate-100">CPIMS</strong> and <strong class="text-slate-800 dark:text-slate-100">KMHFR</strong>—across Nairobi and the South Rift region and extended GIS health facility mapping tools using Django.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">KenyaEMR &bull; CPIMS &bull; KMHFR</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Django &amp; GIS Mapping</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Role 9: Freelance Web Developer & IT Consultant -->
+                <article data-category="software" class="exp-card relative pl-14 sm:pl-20 group">
+                    <div class="absolute left-2.5 sm:left-5.5 top-6 w-5 h-5 rounded-full bg-amber-500 ring-4 ring-white dark:ring-slate-950 shadow"></div>
+                    <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-amber-400 dark:hover:border-amber-600 transition">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">Freelance Web Developer &amp; IT Consultant</h3>
+                                <p class="text-sm sm:text-base font-semibold text-amber-600 dark:text-amber-400 mt-0.5">
+                                    Upwork &amp; Fiverr &bull; <span class="text-slate-500 dark:text-slate-400 font-normal">Global &amp; Local Clients</span>
+                                </p>
+                            </div>
+                            <span class="px-3 py-1 rounded-xl text-xs font-mono font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                Jun 2022 &ndash; Oct 2025
+                            </span>
+                        </div>
+                        <p class="mt-3 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                            Delivered custom responsive websites, Learning Management Systems (LMS) and comprehensive software/technical documentation for diverse international and Kenyan organizations.
+                        </p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Custom Web &amp; LMS</span>
+                            <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300">Technical Documentation</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION & ACADEMIC BACKGROUND ==================== -->
+    <section id="education" class="py-20 bg-white dark:bg-slate-900/50 border-y border-slate-200/70 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-mono font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">03 &bull; Academic Foundation</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                    Education &amp; Academic Background
+                </h2>
+                <p class="mt-2 text-slate-600 dark:text-slate-400">
+                    A rigorous academic journey spanning information technology, enterprise systems governance and revenue administration.
+                </p>
+            </div>
+
+            <!-- Higher Education Cards -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- KESRA -->
+                <div class="p-6 sm:p-7 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-emerald-500 transition">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="w-11 h-11 rounded-xl bg-emerald-600/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-landmark-dome"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                                Ongoing (2026)
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                            Certificate in Tax &amp; Customs Administration
+                        </h3>
+                        <p class="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-1">
+                            Kenya School of Revenue Administration (KESRA)
+                        </p>
+                        <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Focused on corporate tax compliance, international customs procedures, trade facilitation and national fiscal frameworks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- JKUAT -->
+                <div class="p-6 sm:p-7 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-brand-500 transition">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="w-11 h-11 rounded-xl bg-brand-600/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-brand-100 text-brand-800 dark:bg-brand-950 dark:text-brand-300">
+                                Ongoing
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                            Master of Science in Information Technology
+                        </h3>
+                        <p class="text-sm font-semibold text-brand-600 dark:text-brand-400 mt-1">
+                            Jomo Kenyatta University of Agriculture &amp; Technology (JKUAT)
+                        </p>
+                        <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Specializing in enterprise information systems, IT governance, advanced network architecture and software systems security.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- University of Kabianga -->
+                <div class="p-6 sm:p-7 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between hover:border-indigo-500 transition">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="w-11 h-11 rounded-xl bg-indigo-600/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </span>
+                            <span class="px-3 py-1 rounded-full text-xs font-mono font-semibold bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                                Graduated
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">
+                            Bachelor of Science in Information Technology
+                        </h3>
+                        <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mt-1">
+                            University of Kabianga
+                        </p>
+                        <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Comprehensive undergraduate foundation covering software engineering, relational database design, web technologies and systems administration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secondary & Foundational Schooling Banner -->
+            <div class="mt-8 p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-slate-100 via-white to-slate-100 dark:from-slate-900 dark:via-slate-900/90 dark:to-slate-900 border border-slate-200 dark:border-slate-800">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-school text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white">Secondary &amp; Foundational Schooling</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 mt-0.5">Early academic milestones that shaped discipline and leadership.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-3 gap-4 lg:max-w-3xl w-full">
+                        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-950/70 border border-slate-200/80 dark:border-slate-800">
+                            <span class="text-[11px] font-mono uppercase text-brand-600 dark:text-brand-400 font-semibold">Secondary (KCSE)</span>
+                            <p class="text-sm font-bold text-slate-800 dark:text-slate-100 mt-0.5">St. Peter's Mumias Boys High School</p>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-950/70 border border-slate-200/80 dark:border-slate-800">
+                            <span class="text-[11px] font-mono uppercase text-emerald-600 dark:text-emerald-400 font-semibold">Primary (KCPE)</span>
+                            <p class="text-sm font-bold text-slate-800 dark:text-slate-100 mt-0.5">Patrician Primary School</p>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white dark:bg-slate-950/70 border border-slate-200/80 dark:border-slate-800">
+                            <span class="text-[11px] font-mono uppercase text-indigo-600 dark:text-indigo-400 font-semibold">Early Education</span>
+                            <p class="text-sm font-bold text-slate-800 dark:text-slate-100 mt-0.5">Baraka Academy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SPECIALIZED TRAINING & CERTIFICATIONS ==================== -->
+    <section id="certifications" class="py-20 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-mono font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">04 &bull; Credentials &amp; Discipline</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                    Specialized Training &amp; Certifications
+                </h2>
+                <p class="mt-2 text-slate-600 dark:text-slate-400">
+                    Rigorous field training, industry-recognized networking &amp; security credentials and modern software engineering fellowships.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1: Paramilitary Training -->
+                <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-emerald-500 transition">
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-11 h-11 rounded-xl bg-emerald-600/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </span>
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Paramilitary Training</h3>
+                                <p class="text-xs font-mono text-slate-500 dark:text-slate-400">Administrative Police Service (APS) &bull; 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Completed intensive paramilitary, discipline and endurance training with the <strong class="text-slate-900 dark:text-white">Administrative Police Service (APS)</strong> across the National Police Training College (NPTC) 'A' Campus Embakasi (APTC), Nyambene Hills (Meru) and Mt. Kenya.
+                    </p>
+                </div>
+
+                <!-- Card 2: ALX Africa Programs -->
+                <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-brand-500 transition">
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-11 h-11 rounded-xl bg-brand-600/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </span>
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Software Engineering &amp; Tech Leadership</h3>
+                                <p class="text-xs font-mono text-slate-500 dark:text-slate-400">ALX Africa &bull; 2024 &ndash; 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                        Graduated from five specialized <strong class="text-slate-900 dark:text-white">ALX Africa</strong> tracks combining technical depth with venture building:
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-brand-50 dark:bg-brand-950/70 text-brand-700 dark:text-brand-300">Front-End Web Development</span>
+                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-brand-50 dark:bg-brand-950/70 text-brand-700 dark:text-brand-300">Back-End Web Development</span>
+                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-brand-50 dark:bg-brand-950/70 text-brand-700 dark:text-brand-300">Founder Academy</span>
+                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-brand-50 dark:bg-brand-950/70 text-brand-700 dark:text-brand-300">Freelance Academy</span>
+                        <span class="px-2.5 py-1 rounded-lg text-xs font-medium bg-brand-50 dark:bg-brand-950/70 text-brand-700 dark:text-brand-300">AI Career Essentials (AiCE)</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Networking, Hardware & Cybersecurity -->
+                <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-indigo-500 transition">
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-11 h-11 rounded-xl bg-indigo-600/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-server"></i>
+                            </span>
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Networking, Hardware &amp; Security</h3>
+                                <p class="text-xs font-mono text-slate-500 dark:text-slate-400">CompTIA &bull; Cisco &bull; Cyber Shujaa &bull; 2022 &ndash; 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-sm sm:text-base text-slate-600 dark:text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-indigo-500 mt-1 text-xs"></i>
+                            <span><strong class="text-slate-900 dark:text-white">CompTIA A+</strong> (Core 1 &amp; Core 2 Hardware/OS Certification)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-indigo-500 mt-1 text-xs"></i>
+                            <span><strong class="text-slate-900 dark:text-white">Cisco Certified Network Associate (CCNA)</strong> in Routing &amp; Switching</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-check text-indigo-500 mt-1 text-xs"></i>
+                            <span><strong class="text-slate-900 dark:text-white">Cybersecurity &amp; AI:</strong> Cisco, Kenyatta University, ICT Authority, Cyber Shujaa and Salaam Technologies</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Health Informatics -->
+                <div class="p-6 sm:p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:border-rose-500 transition">
+                    <div class="flex items-center justify-between gap-3 mb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-11 h-11 rounded-xl bg-rose-600/10 text-rose-600 dark:text-rose-400 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-notes-medical"></i>
+                            </span>
+                            <div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Health Informatics Certification</h3>
+                                <p class="text-xs font-mono text-slate-500 dark:text-slate-400">Ministry of Health Virtual Academy &bull; 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Certified in <strong class="text-slate-900 dark:text-white">KenyaEMR+ (Level I)</strong> through the Ministry of Health Virtual Academy, validating proficiency in national electronic medical records deployment, data quality assurance and health facility workflow support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COMMUNITY INVOLVEMENT & LEADERSHIP ==================== -->
+    <section id="community" class="py-20 bg-white dark:bg-slate-900/50 border-y border-slate-200/70 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="max-w-3xl mb-12">
+                <span class="text-xs font-mono font-semibold uppercase tracking-widest text-brand-600 dark:text-brand-400">05 &bull; Service &amp; Mentorship</span>
+                <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
+                    Community Involvement &amp; Leadership
+                </h2>
+                <p class="mt-2 text-slate-600 dark:text-slate-400">
+                    Committed to institutional heritage, faith-based fellowship, youth empowerment and developer mentorship across Kenya.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- UoKCSA -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="w-11 h-11 rounded-xl bg-brand-600/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-book-open-reader text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white">UoKCSA Alumnus &amp; Historian</h3>
+                    <p class="text-xs font-mono text-brand-600 dark:text-brand-400 mt-1">University of Kabianga</p>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Active alumnus of the University of Kabianga Catholic Students Association (UoKCSA), contributing to preserving and documenting the association's institutional history and heritage.
+                    </p>
+                </div>
+
+                <!-- St. Peter Faber CLC Group -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="w-11 h-11 rounded-xl bg-emerald-600/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-people-group text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white">St. Peter Faber CLC Group</h3>
+                    <p class="text-xs font-mono text-emerald-600 dark:text-emerald-400 mt-1">Founding Member &bull; 2023 &ndash; Present</p>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Founding member of the St. Peter Faber group within the Christian Life Community (CLC) in Kenya, fostering Ignatian leadership, service and community solidarity.
+                    </p>
+                </div>
+
+                <!-- O.L Foundation -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="w-11 h-11 rounded-xl bg-indigo-600/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-code-branch text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white">O.L Foundation</h3>
+                    <p class="text-xs font-mono text-indigo-600 dark:text-indigo-400 mt-1">Developer Mentorship</p>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Champions emerging software engineers and technologists through structured technical mentorship, code reviews and career guidance via the O.L Foundation.
+                    </p>
+                </div>
+
+                <!-- Safiri Youth Impact -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:-translate-y-1 transition duration-300">
+                    <div class="w-11 h-11 rounded-xl bg-amber-600/10 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-seedling text-lg"></i>
+                    </div>
+                    <h3 class="font-bold text-base sm:text-lg text-slate-900 dark:text-white">Safiri Youth Impact</h3>
+                    <p class="text-xs font-mono text-amber-600 dark:text-amber-400 mt-1">Civic Tech &amp; Youth Platforms</p>
+                    <p class="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Engineered digital platforms supporting youth empowerment, community outreach and social impact initiatives for Safiri Youth Impact.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DIGITAL FOOTPRINT & CONTACT SECTION ==================== -->
+    <section id="contact" class="py-20 sm:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="rounded-3xl bg-gradient-to-br from-slate-900 via-brand-950 to-slate-900 text-white p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+                <!-- Subtle Decorative Grid -->
+                <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-10" style="background-image: radial-gradient(#60a5fa 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+                <div class="relative z-10 grid lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-7 space-y-5">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-mono uppercase tracking-wider bg-brand-500/20 text-brand-300 border border-brand-400/30">
+                            06 &bull; Digital Footprint &amp; Open Source
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                            Explore Code, Systems &amp; Collaboration
+                        </h2>
+                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+                            Active on GitHub under <strong class="text-white font-mono">@Knoph1</strong>, maintaining public repositories covering hospital management systems, university research portals and Python/Django architectures, alongside his primary digital hub at <strong class="text-white font-mono">www.knoph.dev</strong>.
+                        </p>
+
+                        <!-- Repository Focus Tags -->
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-mono bg-white/10 text-slate-200 border border-white/10">Hospital Management Systems</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-mono bg-white/10 text-slate-200 border border-white/10">University Research Portals</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-mono bg-white/10 text-slate-200 border border-white/10">Python / Django Projects</span>
+                            <span class="px-3 py-1.5 rounded-xl text-xs font-mono bg-white/10 text-slate-200 border border-white/10">Enterprise Web Apps</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Links & Copy Bio Summary Card -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <a href="https://www.knoph.dev" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 backdrop-blur-md transition group">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-500/30 text-brand-300 flex items-center justify-center text-xl">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-mono uppercase text-brand-300">Official Portfolio</p>
+                                    <p class="text-lg font-bold text-white">www.knoph.dev</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                        </a>
+
+                        <a href="https://github.com/Knoph1" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-5 rounded-2xl bg-white/10 hover:bg-white/15 border border-white/15 backdrop-blur-md transition group">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/25 text-emerald-300 flex items-center justify-center text-2xl">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-mono uppercase text-emerald-300">GitHub Open Source</p>
+                                    <p class="text-lg font-bold text-white">github.com/Knoph1</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                        </a>
+
+                        <!-- Interactive Copy Executive Summary Button -->
+                        <button id="copyBioBtn" type="button" class="w-full flex items-center justify-center gap-2.5 p-4 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-emerald-500/20 transition cursor-pointer">
+                            <i class="fa-regular fa-copy"></i>
+                            <span id="copyBioText">Copy Official Biography Summary</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="border-t border-slate-200 dark:border-slate-800/80 py-10 bg-white dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2.5">
+                <span class="w-7 h-7 rounded-lg bg-brand-600 text-white font-bold text-xs flex items-center justify-center">KA</span>
+                <span>&copy; 2026 <strong class="text-slate-700 dark:text-slate-200">Knoph O. Ayieko</strong>. Nairobi, Kenya.</span>
+            </div>
+            <p class="italic text-xs sm:text-sm text-center sm:text-right">
+                &ldquo;Efficient systems are the backbone of strong institutions.&rdquo;
+            </p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Banner (Replaces alert()) -->
+    <div id="toastNotification" role="status" aria-live="polite" class="fixed bottom-5 right-5 z-50 translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 shadow-xl border border-slate-700 dark:border-slate-200 text-sm font-medium">
+        <i class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600 text-base"></i>
+        <span id="toastMessage">Biography summary copied to clipboard!</span>
+    </div>
+
+    <!-- ==================== INTERACTIVE JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Dark / Light Theme Toggle Logic
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = document.getElementById('themeIcon');
+            const htmlEl = document.documentElement;
+
+            function syncThemeIcon() {
+                if (htmlEl.classList.contains('dark')) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            }
+            syncThemeIcon();
+
+            themeToggle.addEventListener('click', () => {
+                htmlEl.classList.toggle('dark');
+                localStorage.theme = htmlEl.classList.contains('dark') ? 'dark' : 'light';
+                syncThemeIcon();
+            });
+
+            // 2. Mobile Navigation Drawer Toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuIcon = document.getElementById('mobileMenuIcon');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                mobileMenuIcon.classList.toggle('fa-bars', isHidden);
+                mobileMenuIcon.classList.toggle('fa-xmark', !isHidden);
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.classList.add('fa-bars');
+                    mobileMenuIcon.classList.remove('fa-xmark');
+                });
+            });
+
+            // 3. Interactive Experience Filter Tabs
+            const filterButtons = document.querySelectorAll('.exp-filter-btn');
+            const expCards = document.querySelectorAll('.exp-card');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const filter = btn.getAttribute('data-filter');
+
+                    // Update active button styles
+                    filterButtons.forEach(b => {
+                        b.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
+                        b.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-800');
+                    });
+                    btn.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+                    btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-700', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-800');
+
+                    // Filter experience timeline items
+                    expCards.forEach(card => {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (filter === 'all' || categories.includes(filter)) {
+                            card.style.display = 'block';
+                            card.animate([
+                                { opacity: 0, transform: 'translateY(10px)' },
+                                { opacity: 1, transform: 'translateY(0)' }
+                            ], { duration: 300, easing: 'ease-out' });
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // 4. Scroll Reveal Animation via IntersectionObserver
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // 5. Copy Official Biography Summary (Uses textarea fallback for iFrame safety)
+            const copyBioBtn = document.getElementById('copyBioBtn');
+            const copyBioText = document.getElementById('copyBioText');
+            const toastNotification = document.getElementById('toastNotification');
+            const toastMessage = document.getElementById('toastMessage');
+
+            const officialBioSummary = `Knoph O. Ayieko is a Kenyan software developer, IT specialist, tech entrepreneur and Tax & Customs Administrator based in Nairobi, Kenya. Guided by the philosophy "Efficient systems are the backbone of strong institutions," he serves as Managing Director of Omni-Legacy Limited and Graduate Trainee at the Kenya Revenue Authority (KRA), while pursuing an MSc in IT at JKUAT and a Certificate in Tax & Customs Administration at KESRA. Portfolio: https://www.knoph.dev | GitHub: https://github.com/Knoph1`;
+
+            function showToast(message) {
+                toastMessage.textContent = message;
+                toastNotification.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    toastNotification.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+                }, 3200);
+            }
+
+            copyBioBtn.addEventListener('click', () => {
+                const tempTextarea = document.createElement('textarea');
+                tempTextarea.value = officialBioSummary;
+                tempTextarea.setAttribute('readonly', '');
+                tempTextarea.style.position = 'absolute';
+                tempTextarea.style.left = '-9999px';
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+                try {
+                    document.execCommand('copy');
+                    copyBioText.textContent = 'Copied to Clipboard!';
+                    showToast('Official biography copied to clipboard!');
+                    setTimeout(() => {
+                        copyBioText.textContent = 'Copy Official Biography Summary';
+                    }, 2500);
+                } catch (err) {
+                    showToast('Unable to copy automatically. Please select text manually.');
+                }
+                document.body.removeChild(tempTextarea);
+            });
+        });
+    </script>
+</body>
+</html>
